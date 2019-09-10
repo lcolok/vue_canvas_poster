@@ -1,5 +1,6 @@
-const port = 9018 // dev port
+const port = 9018; // dev port
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/vue_canvas_poster/" : "/",
   devServer: {
     port: port,
     open: false,
@@ -12,13 +13,13 @@ module.exports = {
 
   pages: {
     index: {
-      entry: 'examples/main.js',
-      template: 'public/index.html',
-      filename: 'index.html',
-      title: 'vue canvas poster'
+      entry: "examples/main.js",
+      template: "public/index.html",
+      filename: "index.html",
+      title: "vue canvas poster"
     }
   },
   css: {
     extract: false
   }
-}
+};
